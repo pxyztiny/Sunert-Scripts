@@ -1,9 +1,8 @@
-
 name: 百度极速版
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/30 * * * *'
+     - cron: '*/59 * * * *'
   watch:
     types: started
 jobs:
@@ -15,17 +14,20 @@ jobs:
         TZ: Asia/shanghai
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run: |
+          git clone https://github.com/Sunert/Scripts.git ~/Scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
         run: |
+          cd ~/Scripts
           npm install
       - name: '运行 【百度极速】'
         if: env.BAIDU_COOKIE
         run: |
+          cd ~/Scripts
           node Task/baidu_speed.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
@@ -35,3 +37,4 @@ jobs:
           BARK_SOUND: ${{ secrets.BARK_SOUND }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          key:  
