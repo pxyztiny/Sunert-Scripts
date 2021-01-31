@@ -65,9 +65,9 @@ if (typeof $request !== 'undefined') {
   for (let i = 0; i < BodyArr.length; i++) {
     if (BodyArr[i]) {
       bodyval = BodyArr[i]
-      ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)[1]
-      apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)[1]
-      appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)[1]
+      ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)
+      apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)
+      appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)
       cookieval = `xz_jkd_appkey=${ID}!iOS!${appVersion}`
       times = Date.parse(new Date())/1000
       $.index = i + 1;
