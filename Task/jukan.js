@@ -68,7 +68,7 @@ if (typeof $request !== 'undefined') {
       ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)
       apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)
       appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)
-      cookieval = `xz_jkd_appkey=${ID}!iOS!${appVersion}`
+      cookieval = `JSESSIONID=7C432DC19BD229EC557B3230CBE49F10; SERVERID=4b3bae870580896bded23ba1131db97c|1612116351|1612116309`
       times = Date.parse(new Date())/1000
       $.index = i + 1;
    console.log("聚看点账号"+$.index+"任务开始\n")
