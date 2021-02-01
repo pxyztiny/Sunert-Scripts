@@ -502,7 +502,7 @@ function readTask(artid,arttype) {
    let rewurl =  {
       url: `https://www.xiaodouzhuan.cn/jkd/newmobile/artDetail.action`,
       headers: {Cookie:cookieval,'User-Agent':UA},
-      body: `jsondata={"appid":"xzwl","channel":"IOS","relate":1,"artid":"${artid}","os":"IOS","openid":"${ID}","apptoken":"${apptoken}","appversion":"${appVersion}"}`
+      body: `jsondata={"appid":"xzwl","channel":"IOS","relate":1,"artid":"${artid}","os":"IOS","openid":"${ID}","apptoken":"xzwltoken070704","appversion":"${appVersion}"}`
       }
    $.post(rewurl, async(error, resp, data) => {
      if(resp.statusCode ==200){
@@ -524,7 +524,7 @@ function finishTask(artid,arttype) {
    let finishurl =  {
       url: `https://www.xiaodouzhuan.cn/jkd/account/readAccount.action`,
       headers: {Cookie:cookieval,'User-Agent':UA},      
-      body: `jsondata={"appid":"xzwl","read_weal":0,"paytype":"${arttype}","securitykey":"","channel":"iOS","time":"${times}","apptoken":"${apptoken}","appversion":"${appVersion}","openid":"${ID}","os":"iOS","artid":${artid},"accountType":"0","readmodel":"1"}`
+      body: `jsondata={"appid":"xzwl","read_weal":0,"paytype":"${arttype}","securitykey":"","channel":"iOS","time":"${times}","apptoken":"xzwltoken070704","appversion":"${appVersion}","openid":"${ID}","os":"iOS","artid":${artid},"accountType":"0","readmodel":"1"}`
       }
    $.post(finishurl, async(error, response, data) => {
      //$.log(data+"\n")
@@ -546,7 +546,7 @@ function stimulate() {
    let Advurl =  {
       url: `https://www.xiaodouzhuan.cn/jkd/newmobile/stimulateAdv.action`,
       headers: {Cookie:cookieval,'User-Agent':UA},
-      body: `jsondata={"read_weal":"0","appid":"xzwl", "position":"17","time" : "${times}", "apptoken" : "${apptoken}","appversion":"${appVersion}","openId":"${ID}","os":"iOS","channel":"iOS"}`
+      body: `jsondata={"read_weal":"0","appid":"xzwl", "position":"17","time" : "${times}", "apptoken" : "xzwltoken070704","appversion":"${appVersion}","openId":"${ID}","os":"iOS","channel":"iOS"}`
       }
    $.post(Advurl, async(error, resp, data) => {
        //$.log(data+"\n")
@@ -569,7 +569,7 @@ function Stimulate(position) {
    let stimurl =  {
       url: `https://www.xiaodouzhuan.cn/jkd/account/stimulateAdvAccount.action`,
       headers: {Cookie:cookieval,'User-Agent':UA},      
-      body: `jsondata={"read_weal":"0","appid":"xzwl", "position" : ${position},"time" : "${times}","apptoken":"${apptoken}","appversion":"5.6.5","openid":"${ID}","os":"iOS","channel":"iOS"}`
+      body: `jsondata={"read_weal":"0","appid":"xzwl", "position" : ${position},"time" : "${times}","apptoken":"xzwltoken070704","appversion":"5.6.5","openid":"${ID}","os":"iOS","channel":"iOS"}`
       }
    $.post(stimurl, async(error, resp, data) => {
        //$.log(data+"\n")
