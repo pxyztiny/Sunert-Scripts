@@ -68,7 +68,7 @@ if (typeof $request !== 'undefined') {
       ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)
       apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)
       appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)
-      cookieval = `JSESSIONID=7C432DC19BD229EC557B3230CBE49F10; SERVERID=4b3bae870580896bded23ba1131db97c|1612116351|1612116309`
+      cookieval = `JSESSIONID=C84497FA307F2286620D354311FEBC3B; xz_jkd_appkey=73603695e73c4e3ab269ebf8f1f34394!android!720; domain=www.xiaodouzhuan.cn; Path=/; UM_distinctid=1774d0a1eb242-0d15d0d41f9289-61471127-43ad0-1774d0a1eb4214; CNZZDATA1275507390=526038841-1611899935-%7C1612137987; CNZZDATA1274871401=1106457357-1611901358-https%253A%252F%252Fwww.xiaodouzhuan.cn%252F%7C1612137151; SERVERID=4b3bae870580896bded23ba1131db97c|1612141807|1612141781`
       times = Date.parse(new Date())/1000
       $.index = i + 1;
    console.log("聚看点账号"+$.index+"任务开始\n")
