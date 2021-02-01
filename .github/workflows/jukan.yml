@@ -22,7 +22,7 @@ jobs:
           npm install
       - name: '运行 【聚看点】'
         run: |
-          node task/jukandian.js
+          node Task/jukan.js
         env:
           JKD_COOKIE: ${{ secrets.JKD_COOKIE }}
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
