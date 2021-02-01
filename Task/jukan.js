@@ -77,8 +77,7 @@ if (typeof $request !== 'undefined') {
       await signShare();
       await LuckDrawGold();
       await WelfareCash();
-      await artTotal();
-      await stimulate();
+      //await artTotal();
       await stimulate();
       await TimeBox();
       await userinfo();
